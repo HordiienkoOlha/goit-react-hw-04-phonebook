@@ -1,0 +1,14 @@
+/* .List {} */
+.listItem {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.listItem:last-child {
+    margin-bottom: 0px;
+}
+.button {
+
+    margin-left: 15px;
+} 
