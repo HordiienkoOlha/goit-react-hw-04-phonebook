@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import ContactItem from 'components/ContactItem';
-import {ListGroup} from 'react-bootstrap'
+import { ListGroup } from 'react-bootstrap';
 
 const ContactList = ({ contacts, onDeleteContact }) => {
   return (
