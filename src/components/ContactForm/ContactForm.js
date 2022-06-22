@@ -1,9 +1,6 @@
-// import { Component } from 'react';
-// import PropTypes from 'prop-types';
 import { nanoid } from 'nanoid';
 import { Form, Button } from 'react-bootstrap';
 import { useState } from 'react';
-// import ContactList from 'components/ContactList';
 
 export default function ContactForm({ onSubmit }) {
   const [name, setName] = useState('');
@@ -11,7 +8,6 @@ export default function ContactForm({ onSubmit }) {
 
   const onChange = event => {
     const { name, value } = event.currentTarget;
-    // setName({ [name]: value.toLowerCase() });
     switch (name) {
       case 'name':
         setName(value.toLowerCase());
