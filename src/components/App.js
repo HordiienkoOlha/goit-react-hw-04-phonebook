@@ -33,11 +33,13 @@ export default function App() {
 
   const filteredContacts = () => {
     const newFilter = filter.toLowerCase();
-    return contacts.filter(
-      contact =>
-        contact.name.toLowerCase().includes(newFilter) ||
-        contact.number.includes(newFilter)
-    );
+    if (contacts !== null) {
+      return contacts.filter(
+        contact =>
+          contact.name.toLowerCase().includes(newFilter) ||
+          contact.number.includes(newFilter)
+      );
+    }
   };
   const deleteContact = contactId => {
     setContacts(contacts.filter(contact => contact.id !== contactId));
