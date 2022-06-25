@@ -13,7 +13,9 @@ export default function App() {
   useEffect(() => {
     const contact = localStorage.getItem('contacts');
     const parsedContacts = JSON.parse(contact);
-
+    if (contact === null) {
+      return setContacts([]);
+    }
     setContacts(parsedContacts);
   }, []);
 
@@ -33,14 +35,11 @@ export default function App() {
 
   const filteredContacts = () => {
     const newFilter = filter.toLowerCase();
-    // if (contacts !== null) {
-    console.log(contacts);
     return contacts.filter(
       contact =>
         contact.name.toLowerCase().includes(newFilter) ||
         contact.number.includes(newFilter)
     );
-    // }
   };
   const deleteContact = contactId => {
     setContacts(contacts.filter(contact => contact.id !== contactId));
